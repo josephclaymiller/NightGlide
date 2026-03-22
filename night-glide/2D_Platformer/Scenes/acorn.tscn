@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f00wx"]
 
 [node name="Acorn" type="Area2D" unique_id=1317611850]
+collision_mask = 3
 script = ExtResource("1_wwgty")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1271566392]

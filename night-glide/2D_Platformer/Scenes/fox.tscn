@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5ucs5tteo8yq"]
+
+[ext_resource type="Script" uid="uid://dv3lcyban3mk2" path="res://2D_Platformer/Scripts/fox.gd" id="1_7k104"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbse"]
+size = Vector2(120, 40)
+
+[node name="Fox" type="CharacterBody2D" unique_id=1184135482 groups=["enemies"]]
+script = ExtResource("1_7k104")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1205962681]
+offset_left = -60.0
+offset_top = -20.0
+offset_right = 60.0
+offset_bottom = 20.0
+color = Color(0.77579767, 0.4376593, 0.08417068, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348745305]
+shape = SubResource("RectangleShape2D_dwbse")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1420746585]
+scale = Vector2(3.799, 0.91394186)
+metadata/_edit_group_ = true

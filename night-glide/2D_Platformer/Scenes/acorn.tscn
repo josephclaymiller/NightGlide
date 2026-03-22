@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c1h0cxk73vltp"]
+
+[ext_resource type="Script" uid="uid://dy8tyao2jwucp" path="res://2D_Platformer/Scripts/acorn.gd" id="1_wwgty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f00wx"]
+
+[node name="Acorn" type="Area2D" unique_id=1317611850]
+script = ExtResource("1_wwgty")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1271566392]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.7198071, 0.44376656, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1311989162]
+shape = SubResource("RectangleShape2D_f00wx")

@@ -14,11 +14,13 @@
 [sub_resource type="BoxMesh" id="BoxMesh_yqm6b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e1nh1"]
+size = Vector3(1, 0.36206055, 2.827301)
 
 [node name="Player" type="CharacterBody3D" unique_id=859882615]
 script = ExtResource("1_ilptl")
 
 [node name="FlyingSquirrel" type="Node3D" parent="." unique_id=1078156063]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0)
 
 [node name="Body" type="MeshInstance3D" parent="FlyingSquirrel" unique_id=1045095972]
 transform = Transform3D(1, 0, 0, 0, 0.99647516, 0, 0, 0, 1, 0, 0, 0)
@@ -31,7 +33,7 @@ material_override = ExtResource("1_e1nh1")
 mesh = SubResource("SphereMesh_me4r2")
 
 [node name="Tail" type="MeshInstance3D" parent="FlyingSquirrel" unique_id=1281714911]
-transform = Transform3D(0.5, 0, 0, 0, -0.35355338, 0.21213207, 0, -0.35355338, -0.21213207, 0, -1, -0.5)
+transform = Transform3D(0.5, 0, 0, 0, -0.49999994, -2.6226834e-08, 0, 4.371138e-08, -0.3, 0, -1, -0.4)
 material_override = ExtResource("1_e1nh1")
 mesh = SubResource("CapsuleMesh_2dwsw")
 
@@ -61,5 +63,5 @@ material_override = ExtResource("1_e1nh1")
 mesh = SubResource("BoxMesh_yqm6b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=509451217]
-transform = Transform3D(1.8165035, 0, 0, 0, 2.594451, 0, 0, 0, 1, 0, 0.35910404, 0)
+transform = Transform3D(1.8165035, 0, 0, 0, 2.594451, 0, 0, 0, 1, 0, 0.03321415, 0.35072327)
 shape = SubResource("BoxShape3D_e1nh1")

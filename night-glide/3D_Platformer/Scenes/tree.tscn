@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bmmvyme10vuiv"]
+
+[ext_resource type="Material" uid="uid://0if8tfbv5oa0" path="res://3D_Platformer/Materials/tree_branch_material_3d.tres" id="1_1qgdo"]
+[ext_resource type="PackedScene" uid="uid://ds12440x8rw8q" path="res://3D_Platformer/Scenes/branch.tscn" id="2_uhcdo"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7lhdr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2dwsw"]
+height = 16.045837
+
+[node name="Tree" type="StaticBody3D" unique_id=1803244540]
+
+[node name="TrunkShape" type="MeshInstance3D" parent="." unique_id=1253125872]
+transform = Transform3D(1, 0, 0, 0, 8, 0, 0, 0, 1, 0, 4.629211, 0)
+material_override = ExtResource("1_1qgdo")
+mesh = SubResource("CylinderMesh_7lhdr")
+
+[node name="TrunkCollisionShape" type="CollisionShape3D" parent="." unique_id=92177927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.603729, 0)
+shape = SubResource("CylinderShape3D_2dwsw")
+
+[node name="Branch" parent="." unique_id=543935964 instance=ExtResource("2_uhcdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2255707, 0)
+
+[node name="Branch2" parent="." unique_id=850238850 instance=ExtResource("2_uhcdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.571887, 8.569868, 0)
+
+[node name="Branch3" parent="." unique_id=1970602658 instance=ExtResource("2_uhcdo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 5.459293, 0)
+
+[node name="Branch4" parent="." unique_id=900963397 instance=ExtResource("2_uhcdo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 10.504589, 4.73127)

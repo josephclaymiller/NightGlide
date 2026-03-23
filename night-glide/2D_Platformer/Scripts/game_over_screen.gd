@@ -11,5 +11,13 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_pressed() -> void:
-	get_tree().reload_current_scene()
+#func _on_button_pressed() -> void:
+	##get_tree().reload_current_scene()
+
+
+func _on_main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://start_screen.tscn")
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://2D_Platformer/Scenes/level1.tscn")

@@ -98,4 +98,5 @@ func _check_if_dead() -> void:
 func _end_game() -> void:
 	# Tell World to show the game over screen
 	self.visible = false
-	get_tree().get_root().get_node("World_2D_Platformer/GameOverScreen").visible = true
+	get_tree().change_scene_to_file("res://2D_Platformer/Scenes/game_over_screen.tscn")
+	#get_tree().get_root().get_node("level1/GameOverScreen").visible = true

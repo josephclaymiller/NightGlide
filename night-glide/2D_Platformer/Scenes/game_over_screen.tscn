@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dxowr2ynuf64a"]
+
+[ext_resource type="Script" uid="uid://bngnaqomr6j6r" path="res://2D_Platformer/Scripts/game_over_screen.gd" id="1_86qd0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ibnt"]
+font_size = 48
+
+[node name="GameOverScreen" type="CanvasLayer" unique_id=2040107105]
+script = ExtResource("1_86qd0")
+
+[node name="Panel" type="Panel" parent="." unique_id=340478134]
+offset_right = 1150.0
+offset_bottom = 650.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=195184163]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 206.0
+offset_right = 684.0
+offset_bottom = 273.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_8ibnt")
+
+[node name="RestartButton" type="Button" parent="Panel" unique_id=1974647577]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 288.0
+offset_right = 644.0
+offset_bottom = 319.0
+text = "Restart 2D Platformer"
+
+[node name="MainMenuButton" type="Button" parent="Panel" unique_id=1984687884]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 336.0
+offset_right = 598.0
+offset_bottom = 367.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Panel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

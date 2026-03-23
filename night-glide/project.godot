@@ -11,7 +11,9 @@ config_version=5
 [application]
 
 config/name="Night Glide"
+run/main_scene="uid://dj2yj42dm54e3"
 config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/show_image=false
 config/icon="uid://bdhcdig2ebklb"
 
 [layer_names]

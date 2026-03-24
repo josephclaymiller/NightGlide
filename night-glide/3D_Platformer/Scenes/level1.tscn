@@ -40,7 +40,7 @@ shape = SubResource("BoxShape3D_me4r2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2899239, 13.152462, 0.23307371)
 
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=746026569]
-transform = Transform3D(-1, 3.5527137e-15, 8.742278e-08, 5.335509e-08, 0.7921618, 0.6103111, -6.9252984e-08, 0.6103111, -0.7921618, 4.371139e-07, 2.050312, -2.4640293)
+transform = Transform3D(-1, 6.181724e-08, -6.181724e-08, 0, 0.70710677, 0.70710677, 8.742278e-08, 0.70710677, -0.70710677, 0, 2.05, -2.5)
 
 [node name="Tree" parent="." unique_id=1803244540 instance=ExtResource("3_2dwsw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8094025, 3.8644357, 0)

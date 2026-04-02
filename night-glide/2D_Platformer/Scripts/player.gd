@@ -39,17 +39,17 @@ func _handle_fall(delta: float) -> void:
 	
 func _handle_jumps() -> void:
 	# Check if jump key pressed
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			_jump()
 	
 	# Check if jump key held down
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("jump"):
 		if velocity.y > 0.0:
 			is_gliding = true
 
 	# Check if jump key released
-	if Input.is_action_just_released("ui_accept"):
+	if Input.is_action_just_released("jump"):
 		is_gliding = false
 	
 func _glide(delta: float) -> void:

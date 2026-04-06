@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bck6cckku3ih" path="res://2D_Platformer/Scripts/world_2D_platformer.gd" id="1_xonwm"]
 [ext_resource type="PackedScene" uid="uid://dvudtplmu0f31" path="res://2D_Platformer/Scenes/tree.tscn" id="2_w8i70"]
 [ext_resource type="PackedScene" uid="uid://c1h0cxk73vltp" path="res://2D_Platformer/Scenes/acorn.tscn" id="3_ky1pg"]
+[ext_resource type="PackedScene" uid="uid://boc4pinf1kugp" path="res://2D_Platformer/Scenes/cliff.tscn" id="4_ky1pg"]
 [ext_resource type="PackedScene" uid="uid://b5ucs5tteo8yq" path="res://2D_Platformer/Scenes/fox.tscn" id="4_nejjn"]
 [ext_resource type="PackedScene" uid="uid://c64axs8xjijsf" path="res://2D_Platformer/Scenes/player.tscn" id="5_eot2a"]
 [ext_resource type="PackedScene" uid="uid://dmr6lxmddy3n3" path="res://2D_Platformer/Scenes/snake_left.tscn" id="6_xonwm"]
@@ -23,8 +24,8 @@ position = Vector2(47, -215)
 [node name="Platforms" type="Node2D" parent="." unique_id=1192808462]
 
 [node name="Ground" type="StaticBody2D" parent="Platforms" unique_id=1030138929]
-position = Vector2(-600, 640)
-scale = Vector2(4, 1)
+position = Vector2(-800, 640)
+scale = Vector2(8, 1)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Ground" unique_id=564685070]
@@ -47,6 +48,21 @@ position = Vector2(2400, 640)
 
 [node name="Tree4" parent="Platforms" unique_id=1726526264 instance=ExtResource("2_w8i70")]
 position = Vector2(3600, 640)
+
+[node name="Tree5" parent="Platforms" unique_id=738909501 instance=ExtResource("2_w8i70")]
+position = Vector2(4788, 639)
+
+[node name="Tree6" parent="Platforms" unique_id=1079055579 instance=ExtResource("2_w8i70")]
+position = Vector2(6173, 640)
+
+[node name="Tree7" parent="Platforms" unique_id=916395393 instance=ExtResource("2_w8i70")]
+position = Vector2(7783, 640)
+
+[node name="Cliff" parent="Platforms" unique_id=312122608 instance=ExtResource("4_ky1pg")]
+position = Vector2(-1402, -959)
+
+[node name="Cliff2" parent="Platforms" unique_id=74504771 instance=ExtResource("4_ky1pg")]
+position = Vector2(8416, -959)
 
 [node name="Food" type="Node2D" parent="." unique_id=168113676]
 
@@ -107,16 +123,16 @@ position = Vector2(497, 619)
 position = Vector2(-100, 1)
 
 [node name="Snake2" parent="Enemies" unique_id=1055858589 instance=ExtResource("7_w8i70")]
-position = Vector2(-100, 186)
+position = Vector2(4790, 158)
 
 [node name="Snake4" parent="Enemies" unique_id=809610324 instance=ExtResource("6_xonwm")]
-position = Vector2(1151, 172)
+position = Vector2(6164, 153)
 
 [node name="Snake5" parent="Enemies" unique_id=1460758226 instance=ExtResource("6_xonwm")]
 position = Vector2(2396, 164)
 
 [node name="Snake6" parent="Enemies" unique_id=993904104 instance=ExtResource("7_w8i70")]
-position = Vector2(2396, 360)
+position = Vector2(6184, 354)
 
 [node name="Snake7" parent="Enemies" unique_id=1047205245 instance=ExtResource("6_xonwm")]
 position = Vector2(3596, 558)

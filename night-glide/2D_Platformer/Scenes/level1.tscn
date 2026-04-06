@@ -5,12 +5,20 @@
 [ext_resource type="PackedScene" uid="uid://c1h0cxk73vltp" path="res://2D_Platformer/Scenes/acorn.tscn" id="3_ky1pg"]
 [ext_resource type="PackedScene" uid="uid://b5ucs5tteo8yq" path="res://2D_Platformer/Scenes/fox.tscn" id="4_nejjn"]
 [ext_resource type="PackedScene" uid="uid://c64axs8xjijsf" path="res://2D_Platformer/Scenes/player.tscn" id="5_eot2a"]
+[ext_resource type="PackedScene" uid="uid://dmr6lxmddy3n3" path="res://2D_Platformer/Scenes/snake_left.tscn" id="6_xonwm"]
+[ext_resource type="PackedScene" uid="uid://coabb8hfyjoxj" path="res://2D_Platformer/Scenes/snake_right.tscn" id="7_w8i70"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
 size = Vector2(1152, 400)
 
 [node name="level1" type="Node2D" unique_id=511909730]
 script = ExtResource("1_xonwm")
+
+[node name="Player" parent="." unique_id=301212789 instance=ExtResource("5_eot2a")]
+z_index = 1
+position = Vector2(47, -215)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=776647233]
 
 [node name="Platforms" type="Node2D" parent="." unique_id=1192808462]
 
@@ -95,7 +103,26 @@ position = Vector2(2015, 415)
 [node name="Fox" parent="Enemies" unique_id=1184135482 instance=ExtResource("4_nejjn")]
 position = Vector2(497, 619)
 
-[node name="Player" parent="." unique_id=301212789 instance=ExtResource("5_eot2a")]
-position = Vector2(47, -215)
+[node name="Snake" parent="Enemies" unique_id=39505787 instance=ExtResource("6_xonwm")]
+position = Vector2(-100, 1)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=776647233]
+[node name="Snake2" parent="Enemies" unique_id=1055858589 instance=ExtResource("7_w8i70")]
+position = Vector2(-100, 186)
+
+[node name="Snake4" parent="Enemies" unique_id=809610324 instance=ExtResource("6_xonwm")]
+position = Vector2(1151, 172)
+
+[node name="Snake5" parent="Enemies" unique_id=1460758226 instance=ExtResource("6_xonwm")]
+position = Vector2(2396, 164)
+
+[node name="Snake6" parent="Enemies" unique_id=993904104 instance=ExtResource("7_w8i70")]
+position = Vector2(2396, 360)
+
+[node name="Snake7" parent="Enemies" unique_id=1047205245 instance=ExtResource("6_xonwm")]
+position = Vector2(3596, 558)
+
+[node name="Snake8" parent="Enemies" unique_id=767686234 instance=ExtResource("7_w8i70")]
+position = Vector2(3605, -58)
+
+[node name="Snake3" parent="Enemies" unique_id=1154196163 instance=ExtResource("7_w8i70")]
+position = Vector2(1154, -209)

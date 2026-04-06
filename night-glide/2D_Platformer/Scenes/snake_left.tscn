@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dmr6lxmddy3n3"]
+
+[ext_resource type="Texture2D" uid="uid://5f74nwa6shai" path="res://2D_Platformer/Assets/rat_snek.png" id="1_bjpg2"]
+[ext_resource type="Script" uid="uid://stjq4odapmvt" path="res://2D_Platformer/Scripts/snake.gd" id="1_pqht4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjpg2"]
+radius = 12.187618
+height = 40.0
+
+[node name="Snake" type="CharacterBody2D" unique_id=39505787 groups=["enemies"]]
+z_index = -1
+script = ExtResource("1_pqht4")
+
+[node name="RatSnek" type="Sprite2D" parent="." unique_id=379218442]
+position = Vector2(-59.999996, -17.999998)
+scale = Vector2(5, 5)
+texture = ExtResource("1_bjpg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1603270341]
+position = Vector2(-97, -51)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bjpg2")

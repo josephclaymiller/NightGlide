@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b72uhwp1pbfn2"]
 
-[ext_resource type="Texture2D" uid="uid://bi6oehhuaj8kx" path="res://2D_Platformer/Assets/owl_1.png" id="1_eyyb2"]
+[ext_resource type="Texture2D" uid="uid://bi6oehhuaj8kx" path="res://2D_Platformer/2D_Assets/owl_1.png" id="1_eyyb2"]
 [ext_resource type="Script" uid="uid://plx2ngwjvs55" path="res://2D_Platformer/Scenes/owl.gd" id="1_ieylc"]
-[ext_resource type="Texture2D" uid="uid://bm0sbjx7mvmfl" path="res://2D_Platformer/Assets/owl_1_flying.png" id="2_pl7kv"]
+[ext_resource type="Texture2D" uid="uid://bm0sbjx7mvmfl" path="res://2D_Platformer/2D_Assets/owl_1_flying.png" id="2_pl7kv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eyyb2"]
 radius = 22.0

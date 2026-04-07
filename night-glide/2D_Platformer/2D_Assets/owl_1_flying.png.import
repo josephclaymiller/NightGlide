@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5f74nwa6shai"
-path="res://.godot/imported/rat_snek.png-6aa6ebcf22a0f30d3e124b99f890b437.ctex"
+uid="uid://bm0sbjx7mvmfl"
+path="res://.godot/imported/owl_1_flying.png-70f6a24c5ad0770be6ba7b43b08c764a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2D_Platformer/Assets/rat_snek.png"
-dest_files=["res://.godot/imported/rat_snek.png-6aa6ebcf22a0f30d3e124b99f890b437.ctex"]
+source_file="res://2D_Platformer/2D_Assets/owl_1_flying.png"
+dest_files=["res://.godot/imported/owl_1_flying.png-70f6a24c5ad0770be6ba7b43b08c764a.ctex"]
 
 [params]
 

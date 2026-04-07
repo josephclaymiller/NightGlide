@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmr6lxmddy3n3"]
 
-[ext_resource type="Texture2D" uid="uid://5f74nwa6shai" path="res://2D_Platformer/Assets/rat_snek.png" id="1_bjpg2"]
+[ext_resource type="Texture2D" uid="uid://5f74nwa6shai" path="res://2D_Platformer/2D_Assets/rat_snek.png" id="1_bjpg2"]
 [ext_resource type="Script" uid="uid://stjq4odapmvt" path="res://2D_Platformer/Scripts/snake.gd" id="1_pqht4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjpg2"]

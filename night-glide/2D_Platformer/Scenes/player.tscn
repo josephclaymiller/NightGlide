@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c64axs8xjijsf"]
 
 [ext_resource type="Script" uid="uid://c2lvbamwtcfot" path="res://2D_Platformer/Scripts/player.gd" id="1_4flbx"]
+[ext_resource type="AudioStream" uid="uid://baj0dgd30w57l" path="res://Assets/glide_sfx.mp3" id="2_dpole"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
 size = Vector2(40, 80)
@@ -20,3 +21,6 @@ color = Color(1, 0.85882354, 0.7882353, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976282865]
 shape = SubResource("RectangleShape2D_036b0")
+
+[node name="GlideSFXPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1864818901]
+stream = ExtResource("2_dpole")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi6oehhuaj8kx"
-path="res://.godot/imported/owl_1.png-60a052c1d021f9ab73fabf842206a2c6.ctex"
+uid="uid://ddmv3w1c8k1lb"
+path="res://.godot/imported/acorn.png-64c892e0f39985b9bfef12781b0018cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2D_Platformer/Assets/owl_1.png"
-dest_files=["res://.godot/imported/owl_1.png-60a052c1d021f9ab73fabf842206a2c6.ctex"]
+source_file="res://2D_Platformer/2D_Assets/acorn.png"
+dest_files=["res://.godot/imported/acorn.png-64c892e0f39985b9bfef12781b0018cc.ctex"]
 
 [params]
 

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dmr6lxmddy3n3" path="res://2D_Platformer/Scenes/snake_left.tscn" id="6_xonwm"]
 [ext_resource type="PackedScene" uid="uid://coabb8hfyjoxj" path="res://2D_Platformer/Scenes/snake_right.tscn" id="7_w8i70"]
 [ext_resource type="PackedScene" uid="uid://b72uhwp1pbfn2" path="res://2D_Platformer/Scenes/owl.tscn" id="9_nejjn"]
+[ext_resource type="AudioStream" uid="uid://mf8ygaak7wan" path="res://Assets/NightGlide_BackgroundMusic.mp3" id="10_eot2a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
 size = Vector2(1152, 400)
@@ -116,7 +117,7 @@ position = Vector2(3458, 415)
 position = Vector2(2057, 415)
 
 [node name="Acorn17" parent="Food" unique_id=877296319 instance=ExtResource("3_ky1pg")]
-position = Vector2(3227, -191)
+position = Vector2(3227, -185)
 
 [node name="Acorn18" parent="Food" unique_id=816111698 instance=ExtResource("3_ky1pg")]
 position = Vector2(4439, 413)
@@ -157,7 +158,7 @@ position = Vector2(-100, 1)
 position = Vector2(4789, 158)
 
 [node name="Snake4" parent="Enemies" unique_id=809610324 instance=ExtResource("6_xonwm")]
-position = Vector2(6164, 153)
+position = Vector2(6174, 160)
 
 [node name="Snake5" parent="Enemies" unique_id=1460758226 instance=ExtResource("6_xonwm")]
 position = Vector2(2401, 164)
@@ -171,9 +172,14 @@ position = Vector2(3599, 558)
 [node name="Snake8" parent="Enemies" unique_id=767686234 instance=ExtResource("7_w8i70")]
 position = Vector2(3602, -56)
 
-[node name="Snake3" parent="Enemies" unique_id=1154196163 instance=ExtResource("7_w8i70")]
-position = Vector2(1152, -209)
-
 [node name="Owl" parent="Enemies" unique_id=1154621883 instance=ExtResource("9_nejjn")]
 position = Vector2(2408, -398)
 player_path = NodePath("../../Player")
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=21904355]
+stream = ExtResource("10_eot2a")
+autoplay = true
+parameters/looping = true
+
+[node name="Snake" parent="." unique_id=827815964 instance=ExtResource("7_w8i70")]
+position = Vector2(1153, -226)

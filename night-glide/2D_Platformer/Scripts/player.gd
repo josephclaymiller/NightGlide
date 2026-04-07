@@ -15,7 +15,10 @@ var is_climbing: bool = false
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
-	
+		
+	if is_on_floor():
+		$GlideSFXPlayer.stop()
+		
 	if is_climbing:
 		_handle_climb()
 	else:
@@ -40,6 +43,7 @@ func _handle_fall(delta: float) -> void:
 func _handle_jumps() -> void:
 	# Check if jump key pressed
 	if Input.is_action_just_pressed("jump"):
+		$GlideSFXPlayer.play()
 		if is_on_floor():
 			_jump()
 	
@@ -50,6 +54,7 @@ func _handle_jumps() -> void:
 
 	# Check if jump key released
 	if Input.is_action_just_released("jump"):
+		$GlideSFXPlayer.stop()
 		is_gliding = false
 	
 func _glide(delta: float) -> void:

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1h0cxk73vltp"]
 
 [ext_resource type="Script" uid="uid://dy8tyao2jwucp" path="res://2D_Platformer/Scripts/acorn.gd" id="1_wwgty"]
-[ext_resource type="Texture2D" uid="uid://ddmv3w1c8k1lb" path="res://2D_Platformer/Assets/acorn.png" id="2_wxpoh"]
+[ext_resource type="Texture2D" uid="uid://ddmv3w1c8k1lb" path="res://2D_Platformer/2D_Assets/acorn.png" id="2_wxpoh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f00wx"]
 

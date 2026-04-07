@@ -14,10 +14,6 @@ metadata/_edit_group_ = true
 position = Vector2(-10.5, 15)
 shape = SubResource("RectangleShape2D_dwbse")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1420746585]
-scale = Vector2(3.799, 0.91394186)
-metadata/_edit_group_ = true
-
 [node name="Fox" type="Sprite2D" parent="." unique_id=556535388]
 scale = Vector2(10, 10)
 texture = ExtResource("2_0kiyw")

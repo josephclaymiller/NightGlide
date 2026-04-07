@@ -12,9 +12,10 @@ const OWL_HEIGHT: float = 30
 
 var time_spent_resting: float = 0.0
 var target_pos: Vector2 = Vector2.ZERO
+var owl_scale: float = 1.0
 
 func _ready() -> void:
-	pass
+	owl_scale = sprite.scale.x
 
 func _physics_process(_delta: float) -> void:
 	if not player.is_on_floor() and not player.is_climbing:
@@ -31,10 +32,10 @@ func _physics_process(_delta: float) -> void:
 		var dir: Vector2 = (target_pos - global_position).normalized()
 		velocity = dir * SPEED
 		if target_pos.x < global_position.x:
-			sprite.scale.x = 5.0
+			sprite.scale.x = owl_scale
 			rotation = dir.angle() + PI
 		else:
-			sprite.scale.x = -5.0
+			sprite.scale.x = -owl_scale
 			rotation = Vector2(-dir.x, dir.y).angle() + PI
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, SPEED)

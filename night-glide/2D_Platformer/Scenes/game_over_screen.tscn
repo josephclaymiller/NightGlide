@@ -8,34 +8,50 @@ font_size = 48
 [node name="GameOverScreen" type="CanvasLayer" unique_id=2040107105]
 script = ExtResource("1_86qd0")
 
-[node name="Panel" type="Panel" parent="." unique_id=340478134]
-offset_right = 1150.0
-offset_bottom = 650.0
+[node name="Control" type="Control" parent="." unique_id=928901132]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel" unique_id=195184163]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 206.0
-offset_right = 684.0
-offset_bottom = 273.0
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=137739318]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -68.5
+offset_right = 130.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=189797714]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer" unique_id=195184163]
+layout_mode = 2
 text = "Game Over"
 label_settings = SubResource("LabelSettings_8ibnt")
 
-[node name="RestartButton" type="Button" parent="Panel" unique_id=1974647577]
-layout_mode = 0
-offset_left = 466.0
-offset_top = 288.0
-offset_right = 644.0
-offset_bottom = 319.0
-text = "Restart 2D Platformer"
+[node name="RestartButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1974647577]
+layout_mode = 2
+text = "Restart"
 
-[node name="MainMenuButton" type="Button" parent="Panel" unique_id=1984687884]
-layout_mode = 0
-offset_left = 502.0
-offset_top = 336.0
-offset_right = 598.0
-offset_bottom = 367.0
+[node name="MainMenuButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1984687884]
+layout_mode = 2
 text = "Main Menu"
 
-[connection signal="pressed" from="Panel/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="Panel/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

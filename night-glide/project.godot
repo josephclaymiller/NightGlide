@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "Mobile")
 boot_splash/show_image=false
 config/icon="uid://bdhcdig2ebklb"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 jump={

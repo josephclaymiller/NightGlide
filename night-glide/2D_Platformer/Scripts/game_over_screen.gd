@@ -8,6 +8,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	# press jump button to restart game
+	if Input.is_action_just_pressed("jump"):
+		restart_game()
 	# Quit when escape button is pressed
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
@@ -19,4 +22,7 @@ func _on_main_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://start_screen.tscn")
 
 func _on_restart_button_pressed() -> void:
+	restart_game()
+	
+func restart_game() -> void:
 	get_tree().change_scene_to_file("res://2D_Platformer/Scenes/level1.tscn")

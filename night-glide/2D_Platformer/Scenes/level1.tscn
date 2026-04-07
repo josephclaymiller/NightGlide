@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c64axs8xjijsf" path="res://2D_Platformer/Scenes/player.tscn" id="5_eot2a"]
 [ext_resource type="PackedScene" uid="uid://dmr6lxmddy3n3" path="res://2D_Platformer/Scenes/snake_left.tscn" id="6_xonwm"]
 [ext_resource type="PackedScene" uid="uid://coabb8hfyjoxj" path="res://2D_Platformer/Scenes/snake_right.tscn" id="7_w8i70"]
+[ext_resource type="PackedScene" uid="uid://b72uhwp1pbfn2" path="res://2D_Platformer/Scenes/owl.tscn" id="9_nejjn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
 size = Vector2(1152, 400)
@@ -172,3 +173,7 @@ position = Vector2(3602, -56)
 
 [node name="Snake3" parent="Enemies" unique_id=1154196163 instance=ExtResource("7_w8i70")]
 position = Vector2(1152, -209)
+
+[node name="Owl" parent="Enemies" unique_id=1154621883 instance=ExtResource("9_nejjn")]
+position = Vector2(2408, -398)
+player_path = NodePath("../../Player")

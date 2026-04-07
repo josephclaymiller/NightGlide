@@ -7,7 +7,7 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Quit when escape button is pressed
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()

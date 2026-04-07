@@ -1,3 +1,39 @@
 [gd_scene format=3 uid="uid://b72uhwp1pbfn2"]
 
-[node name="Owl" type="CharacterBody2D" unique_id=1154621883]
+[ext_resource type="Texture2D" uid="uid://bi6oehhuaj8kx" path="res://2D_Platformer/Assets/owl_1.png" id="1_eyyb2"]
+[ext_resource type="Script" uid="uid://plx2ngwjvs55" path="res://2D_Platformer/Scenes/owl.gd" id="1_ieylc"]
+[ext_resource type="Texture2D" uid="uid://bm0sbjx7mvmfl" path="res://2D_Platformer/Assets/owl_1_flying.png" id="2_pl7kv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eyyb2"]
+radius = 22.0
+height = 94.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ieylc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eyyb2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pl7kv")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[node name="Owl" type="CharacterBody2D" unique_id=1154621883 groups=["enemies"]]
+script = ExtResource("1_ieylc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475573013]
+position = Vector2(-7, -10)
+shape = SubResource("CapsuleShape2D_eyyb2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1020892270]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_ieylc")

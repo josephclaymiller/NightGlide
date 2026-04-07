@@ -7,10 +7,17 @@ const GRAVITY_FALL: float = 200.0
 const MASK_WORLD: int = 1        # layer 1
 const MASK_CLIMBABLE: int = 4    # layer 3 (bit 2 = value 4)
 
+@onready var sprite: Sprite2D = $FlyingSquirrel
+
 var is_dead: bool = false
 var is_gliding: bool = false
 var on_tree: bool = false
 var is_climbing: bool = false
+var squirrel_scale: float = 1.0
+var facing: float = 1.0  # replaces reading scale.x for direction
+
+func _ready() -> void:
+	squirrel_scale = sprite.scale.x
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -18,6 +25,8 @@ func _physics_process(delta: float) -> void:
 		
 	if is_on_floor():
 		$GlideSFXPlayer.stop()
+		
+	# face sprite in direction player is moving
 		
 	if is_climbing:
 		_handle_climb()
@@ -71,14 +80,25 @@ func _handle_movement() -> void:
 	var direction: float = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		facing = sign(direction)
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, SPEED)
-		
+	if not is_climbing:
+		# reset squirrel position
+		sprite.rotation_degrees = 0.0
+		sprite.scale.x = facing * squirrel_scale
+		sprite.scale.y = squirrel_scale
+	
 func _handle_climb() -> void:
 	if Input.is_action_pressed("ui_up"):
 		velocity.y = -SPEED
+		sprite.rotation_degrees = -90.0 * facing
+		sprite.scale.x = facing * squirrel_scale
+		sprite.scale.y = squirrel_scale
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = SPEED
+		sprite.rotation_degrees = 90.0 * facing
+		sprite.scale.y = -squirrel_scale
 	else:
 		velocity.y = 0.0
 		

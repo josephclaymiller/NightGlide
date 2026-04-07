@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c2lvbamwtcfot" path="res://2D_Platformer/Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="AudioStream" uid="uid://baj0dgd30w57l" path="res://Assets/glide_sfx.mp3" id="2_dpole"]
+[ext_resource type="Texture2D" uid="uid://ch8lkcyf5stha" path="res://2D_Platformer/2D_Assets/flying_squirrel.png" id="3_vmhux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
-size = Vector2(40, 80)
+size = Vector2(67, 38)
 
 [node name="Player" type="CharacterBody2D" unique_id=301212789 groups=["player"]]
 collision_layer = 2
@@ -12,15 +13,13 @@ collision_mask = 5
 script = ExtResource("1_4flbx")
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=188545668]
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-offset_bottom = 40.0
-color = Color(1, 0.85882354, 0.7882353, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976282865]
+position = Vector2(0.5, 4)
 shape = SubResource("RectangleShape2D_036b0")
 
 [node name="GlideSFXPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1864818901]
 stream = ExtResource("2_dpole")
+
+[node name="FlyingSquirrel" type="Sprite2D" parent="." unique_id=2000314623]
+scale = Vector2(3, 3)
+texture = ExtResource("3_vmhux")

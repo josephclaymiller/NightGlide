@@ -1,24 +1,23 @@
 [gd_scene format=3 uid="uid://b5ucs5tteo8yq"]
 
 [ext_resource type="Script" uid="uid://dv3lcyban3mk2" path="res://2D_Platformer/Scripts/fox.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://btofmxe3ajs6s" path="res://2D_Platformer/Assets/fox.png" id="2_0kiyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbse"]
-size = Vector2(120, 40)
+size = Vector2(119, 90)
 
 [node name="Fox" type="CharacterBody2D" unique_id=1184135482 groups=["enemies"]]
 script = ExtResource("1_7k104")
 metadata/_edit_group_ = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1205962681]
-offset_left = -60.0
-offset_top = -20.0
-offset_right = 60.0
-offset_bottom = 20.0
-color = Color(0.77579767, 0.4376593, 0.08417068, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348745305]
+position = Vector2(-10.5, 15)
 shape = SubResource("RectangleShape2D_dwbse")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1420746585]
 scale = Vector2(3.799, 0.91394186)
 metadata/_edit_group_ = true
+
+[node name="Fox" type="Sprite2D" parent="." unique_id=556535388]
+scale = Vector2(10, 10)
+texture = ExtResource("2_0kiyw")

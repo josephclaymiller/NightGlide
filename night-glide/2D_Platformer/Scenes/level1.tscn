@@ -148,7 +148,7 @@ position = Vector2(8091, 215)
 [node name="Enemies" type="Node2D" parent="." unique_id=1738845401]
 
 [node name="Fox" parent="Enemies" unique_id=1184135482 instance=ExtResource("4_nejjn")]
-position = Vector2(497, 619)
+position = Vector2(991, 580)
 
 [node name="Snake" parent="Enemies" unique_id=39505787 instance=ExtResource("6_xonwm")]
 position = Vector2(-100, 1)
